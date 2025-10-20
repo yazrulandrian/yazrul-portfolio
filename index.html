@@ -6,6 +6,7 @@
     <title>Yazrul Andrian - IT Support Specialist</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -18,7 +19,8 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -36,25 +38,33 @@
                 <div class="floating-card">
                     <h1 class="hero-title">Yazrul Andrian, <span class="highlight">S.Kom</span></h1>
                     <p class="hero-subtitle">IT Support Specialist & Network Engineer</p>
-                    <p class="hero-description">Profesional IT dengan pengalaman lebih dari 5 tahun dalam IT Support, Network Management, dan Project Implementation</p>
+                    <p class="hero-description">Professional IT dengan pengalaman lebih dari 5 tahun dalam IT Support, Network Management, dan Project Implementation</p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
-                        <a href="#experience" class="btn btn-secondary">Lihat Pengalaman</a>
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>Hubungi Saya
+                        </a>
+                        <a href="#experience" class="btn btn-secondary">
+                            <i class="fas fa-briefcase"></i>Lihat Pengalaman
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="floating-cube">
-                    <div class="cube">
-                        <div class="face front">IT</div>
-                        <div class="face back">NETWORK</div>
-                        <div class="face right">SUPPORT</div>
-                        <div class="face left">TECH</div>
-                        <div class="face top">PRO</div>
-                        <div class="face bottom">DEV</div>
+                <div class="tech-sphere">
+                    <div class="sphere">
+                        <div class="ring ring-1"></div>
+                        <div class="ring ring-2"></div>
+                        <div class="ring ring-3"></div>
+                        <div class="core"></div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll untuk menjelajahi</p>
         </div>
     </section>
 
@@ -65,42 +75,67 @@
             <div class="about-content">
                 <div class="about-text">
                     <div class="info-card">
-                        <h3>Professional Summary</h3>
-                        <p>IT Support and Network Professional dengan pengalaman lebih dari 5 tahun dalam menangani operasional teknis, pemeliharaan jaringan, dan dukungan end-user di lingkungan perusahaan menengah hingga besar.</p>
+                        <h3><i class="fas fa-user"></i>Professional Summary</h3>
+                        <p>Saya adalah seorang profesional IT Support dan Network Enterprise dengan pengalaman lebih dari 5 tahun dalam menangani operasional teknis, pemeliharaan jaringan, serta dukungan end-user di lingkungan perusahaan berskala menengah hingga besar.</p>
+                        <p>Memiliki keahlian dalam troubleshooting perangkat keras dan lunak, manajemen jaringan (LAN/WAN/VPN), serta pengelolaan sistem POS dan perangkat operasional retail.</p>
                         <div class="info-grid">
                             <div class="info-item">
-                                <strong>Email:</strong>
-                                <span>yazrulandrian11@gmail.com</span>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email</strong>
+                                    <span>yazrulandrian11@gmail.com</span>
+                                </div>
                             </div>
                             <div class="info-item">
-                                <strong>Phone:</strong>
-                                <span>0822-5801-5010</span>
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Telepon</strong>
+                                    <span>0822-5801-5010</span>
+                                </div>
                             </div>
                             <div class="info-item">
-                                <strong>Lokasi:</strong>
-                                <span>Jakarta Timur</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Lokasi</strong>
+                                    <span>Jakarta Timur</span>
+                                </div>
                             </div>
                             <div class="info-item">
-                                <strong>Status:</strong>
-                                <span>Available for Projects</span>
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Status</strong>
+                                    <span>Available for Projects</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="about-stats">
                     <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
                         <div class="stat-number">5+</div>
                         <div class="stat-label">Tahun Pengalaman</div>
                     </div>
                     <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
                         <div class="stat-number">99.7%</div>
                         <div class="stat-label">System Uptime</div>
                     </div>
                     <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
                         <div class="stat-number">200+</div>
                         <div class="stat-label">Projects Completed</div>
                     </div>
                     <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
                         <div class="stat-number">100%</div>
                         <div class="stat-label">Client Satisfaction</div>
                     </div>
@@ -117,11 +152,18 @@
                 <!-- PT Allure Alluminio -->
                 <div class="exp-card">
                     <div class="exp-image">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="PT Allure Alluminio">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Senior IT Support">
                         <div class="exp-overlay">
-                            <h3>Senior IT Support</h3>
-                            <p>PT Allure Alluminio</p>
-                            <span>Jan 2025 - Sept 2025</span>
+                            <div class="exp-content">
+                                <h3>Senior IT Support</h3>
+                                <p class="company">PT Allure Alluminio, Jakarta</p>
+                                <p class="period">Jan 2025 – Sept 2025</p>
+                                <ul class="exp-features">
+                                    <li>Troubleshooting hardware, software, jaringan</li>
+                                    <li>Monitoring infrastruktur IT - 99.7% uptime</li>
+                                    <li>Upgrade sistem & migrasi tanpa downtime</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -129,11 +171,18 @@
                 <!-- PT Bintang Teknologi Pratama -->
                 <div class="exp-card">
                     <div class="exp-image">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="PT Bintang Teknologi Pratama">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="IT Project Engineer">
                         <div class="exp-overlay">
-                            <h3>IT Project Engineer</h3>
-                            <p>PT Bintang Teknologi Pratama</p>
-                            <span>Jul 2024 - Des 2024</span>
+                            <div class="exp-content">
+                                <h3>IT Project Engineer</h3>
+                                <p class="company">PT Bintang Teknologi Pratama, Bekasi</p>
+                                <p class="period">Jul 2024 – Des 2024</p>
+                                <ul class="exp-features">
+                                    <li>Instalasi & konfigurasi sistem IT</li>
+                                    <li>Koordinasi dengan vendor</li>
+                                    <li>Testing & commissioning</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -141,11 +190,18 @@
                 <!-- PT Sakti Jasa Sinergi -->
                 <div class="exp-card">
                     <div class="exp-image">
-                        <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="PT Sakti Jasa Sinergi">
+                        <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Technical Support Supervisor">
                         <div class="exp-overlay">
-                            <h3>Technical Support Supervisor</h3>
-                            <p>PT Sakti Jasa Sinergi</p>
-                            <span>Mar 2023 - Mar 2024</span>
+                            <div class="exp-content">
+                                <h3>Technical Support Supervisor</h3>
+                                <p class="company">PT Sakti Jasa Sinergi, Jakarta Barat</p>
+                                <p class="period">Mar 2023 – Mar 2024</p>
+                                <ul class="exp-features">
+                                    <li>Memimpin tim teknisi IT (5 orang)</li>
+                                    <li>Training internal</li>
+                                    <li>Preventive maintenance</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,11 +209,18 @@
                 <!-- PT IndoSterling Wahana Realty -->
                 <div class="exp-card">
                     <div class="exp-image">
-                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="PT IndoSterling Wahana Realty">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="IT Support Officer">
                         <div class="exp-overlay">
-                            <h3>IT Support Officer</h3>
-                            <p>PT IndoSterling Wahana Realty</p>
-                            <span>Aug 2018 - Feb 2023</span>
+                            <div class="exp-content">
+                                <h3>IT Support Officer</h3>
+                                <p class="company">PT IndoSterling Wahana Realty, Jakarta Pusat</p>
+                                <p class="period">Aug 2018 – Feb 2023</p>
+                                <ul class="exp-features">
+                                    <li>Mengelola IT support kantor pusat & 12 cabang</li>
+                                    <li>200+ perangkat retail</li>
+                                    <li>Monitoring proaktif</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -165,68 +228,77 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <!-- Education Section -->
+    <section id="education" class="education">
         <div class="container">
-            <h2 class="section-title">Keahlian Teknis</h2>
-            <div class="skills-container">
-                <div class="skills-category">
-                    <h3>Technical Skills</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Troubleshooting Hardware & Software</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Network Management (LAN/WAN/VPN)</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>POS System & Retail Devices</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>CCTV Installation</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 85%"></div>
-                            </div>
+            <h2 class="section-title">Pendidikan</h2>
+            <div class="education-content">
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-details">
+                        <h3>Sarjana Teknik Informatika (S.Kom)</h3>
+                        <p class="institution">Universitas Dian Nusantara</p>
+                        <p class="year">2023</p>
+                        <div class="grade">
+                            <span class="grade-label">IPK:</span>
+                            <span class="grade-value">3.59 / 4.00</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="skills-category">
-                    <h3>Professional Skills</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Team Leadership</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Project Management</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 87%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Problem Solving</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 94%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Technical Documentation</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 83%"></div>
-                            </div>
-                        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Sertifikasi</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Mikrotik Certified Network Associate (MTCNA)</h3>
+                        <p>IDN</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Keselamatan dan Kesehatan Kerja (K3)</h3>
+                        <p>Universitas Dian Nusantara</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Cyber Security Threats Financial</h3>
+                        <p>LintasArta</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Webinar: Hidrogen Emisi Nett Zero</h3>
+                        <p>Universitas Dian Nusantara</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Service Subcontractor Resource Of Huawei CNBG</h3>
+                        <p>Huawei</p>
                     </div>
                 </div>
             </div>
@@ -240,17 +312,24 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-card">
-                        <h3>Let's Connect!</h3>
+                        <h3><i class="fas fa-paper-plane"></i>Let's Connect!</h3>
                         <p>Siap untuk mendiskusikan project IT atau peluang kolaborasi?</p>
                         <div class="contact-links">
                             <a href="mailto:yazrulandrian11@gmail.com" class="contact-link">
-                                📧 yazrulandrian11@gmail.com
+                                <i class="fas fa-envelope"></i>
+                                <span>yazrulandrian11@gmail.com</span>
                             </a>
                             <a href="tel:082258015010" class="contact-link">
-                                📱 0822-5801-5010
+                                <i class="fas fa-phone"></i>
+                                <span>0822-5801-5010</span>
                             </a>
                             <a href="https://linkedin.com/in/yazrul-andrian" class="contact-link">
-                                💼 LinkedIn Profile
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn Profile</span>
+                            </a>
+                            <a href="https://yazrulandrian.github.io/mv.portofolio/" class="contact-link">
+                                <i class="fas fa-globe"></i>
+                                <span>Portfolio Website</span>
                             </a>
                         </div>
                     </div>
@@ -263,6 +342,10 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Yazrul Andrian. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/yazrul-andrian"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:yazrulandrian11@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
 

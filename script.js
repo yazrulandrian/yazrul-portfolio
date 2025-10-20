@@ -39,73 +39,90 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Animate skill bars when they come into view
+// Add parallax effect to background
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.hero');
+    parallaxElements.forEach(element => {
+        if (element) {
+            element.style.backgroundPositionY = (scrolled * 0.5) + 'px';
+        }
+    });
+});
+
+// Add intersection observer for animations
 const observerOptions = {
-    threshold: 0.5,
-    rootMargin: '0px 0px -100px 0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.animation = 'fillBar 2s ease-in-out forwards';
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
         }
     });
 }, observerOptions);
 
-document.querySelectorAll('.skill-level').forEach(skill => {
-    observer.observe(skill);
-});
-
-// Add floating animation to stat cards
-const statCards = document.querySelectorAll('.stat-card');
-statCards.forEach((card, index) => {
-    card.style.animationDelay = `${index * 0.2}s`;
-});
-
-// Add typing effect to hero title
-const heroTitle = document.querySelector('.hero-title');
-const originalText = heroTitle.innerHTML;
-
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function typing() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typing, speed);
-        }
-    }
-    
-    typing();
-}
-
-// Initialize typing effect when page loads
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        typeWriter(heroTitle, originalText);
-    }, 1000);
-});
-
-// Add parallax effect to background
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallax = document.querySelector('.hero');
-    if (parallax) {
-        parallax.style.backgroundPositionY = (scrolled * 0.5) + 'px';
-    }
+// Observe elements for animation
+document.querySelectorAll('.stat-card, .exp-card, .cert-card, .edu-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
 });
 
 // Add hover effect to experience cards
 const expCards = document.querySelectorAll('.exp-card');
-expCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px) scale(1.02)';
+expCards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.1}s`;
+});
+
+// Initialize animations when page loads
+window.addEventListener('load', () => {
+    // Add loaded class to body for initial animations
+    document.body.classList.add('loaded');
+});
+
+// Add scroll to top functionality
+const scrollToTop = document.createElement('div');
+scrollToTop.innerHTML = '<i class="fas fa-chevron-up"></i>';
+scrollToTop.className = 'scroll-to-top';
+scrollToTop.style.cssText = `
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+`;
+
+document.body.appendChild(scrollToTop);
+
+scrollToTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
-    
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0) scale(1)';
-    });
+});
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        scrollToTop.style.opacity = '1';
+        scrollToTop.style.transform = 'translateY(0)';
+    } else {
+        scrollToTop.style.opacity = '0';
+        scrollToTop.style.transform = 'translateY(20px)';
+    }
 });
